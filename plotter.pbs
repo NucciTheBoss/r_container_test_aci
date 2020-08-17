@@ -4,6 +4,7 @@
 #PBS -l pmem=1gb
 #PBS -l walltime=00:10:00
 #PBS -j oe
+#PBS -o plotter.log
 #PBS -N plotter
 
 cd ${PBS_O_WORKDIR}
@@ -18,6 +19,13 @@ Rscript ./src/plotter.R &> /dev/null
 cd ${HOME}/scratch
 zip -r plotter_graphs.zip \
     fancy_graph_1.png \
+    fancy_graph_2.png \
+    huron_type_b.png \
+    huron_type_l.png \
+    huron_type_p.png \
+    longley_xyplot.png
+
+rm -rf fancy_graph_1.png \
     fancy_graph_2.png \
     huron_type_b.png \
     huron_type_l.png \
