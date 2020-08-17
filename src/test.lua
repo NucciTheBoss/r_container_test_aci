@@ -10,9 +10,9 @@ at iask@ics.psu.edu or jcn23@psu.edu]])
 whatis("R Version: 4.0.2")
 whatis("RStudio Version: 1.3.959")
 
-local RStudioexec = "`which singularity` -s exec ${HOME}/sw/r_rstudio/rstudiobase_test.sif rstudio $@ &> /dev/null"
-local Rexec = "`which singularity` -s exec ${HOME}/sw/r_rstudio/rstudiobase_test.sif R $@"
-local Rscriptexec = "`which singularity` -s exec ${HOME}/sw/r_rstudio/rstudiobase_test.sif Rscript $@"
+local RStudioexec = "`which singularity` -s exec ${HOME}/work/sw/r_rstudio/rstudiobase_test.sif rstudio $@ &> /dev/null"
+local Rexec = "`which singularity` -s exec ${HOME}/work/sw/r_rstudio/rstudiobase_test.sif R $@"
+local Rscriptexec = "`which singularity` -s exec ${HOME}/work/sw/r_rstudio/rstudiobase_test.sif Rscript $@"
 
 set_shell_function("rstudio", RStudioexec)
 set_shell_function("R", Rexec)
