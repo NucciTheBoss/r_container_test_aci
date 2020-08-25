@@ -61,7 +61,34 @@ $ qsub plotter.pbs
 
 The job should take no more than 10 minutes to complete. This job's purpose is to generate some graphs that are important to your research. The R script `plotter.R` will create the graphs and save them as `.png` files. The job script will then go in and create a zip archive that you can download to your local machine and analyze your data. To view the data on the cluster simply use the `unzip` command.
 
-If the job is successful, you should be able to find the zip file `my_graphs.zip` in your scratch directory.
+If the job is successful, you should be able to find the zip file `my_graphs.zip` in your scratch directory. The `zip` archive should contain six different graphs. Your output should look like the following:
+
+* [fancy_graph_1](#fancy_graph_1)
+* [fancy_graph_2](#fancy_graph_2)
+* [huron_type_b](#huron_type_b)
+* [huron_type_l](#huron_type_l)
+* [huron_type_p](#huron_type_p)
+* [longley_xyplot](#longley_xyplot)
+
+#### fancy_graph_1
+![image 1](./share/images/fancy_graph_1.png)
+
+#### fancy_graph_2
+![image 2](./share/images/fancy_graph_2.png)
+
+#### huron_type_b
+![image 3](./share/images/huron_type_b.png)
+
+#### huron_type_l
+![image 4](./share/images/huron_type_l.png)
+
+#### huron_type_p
+![image 5](./share/images/huron_type_p.png)
+
+#### longley_xyplot
+![image 6](./share/images/longley_xyplot.png)
+
+If your graphs look something like the above then the test was a success!
 
 ## Installing a new package
 Let's say that I want to add a new R package to my container, but I don't necessarily want to rebuild it. R is neat because it lets you store R packages in external libraries rather than installing it alongside the root installation. Since R has that capability, we are going to install the R package `charlatan` in an external library outside of the container. Use the following commands to do this:
