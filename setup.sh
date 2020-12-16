@@ -6,20 +6,21 @@
 
 # Set up singularity container
 echo "Setting up executables"
-if [ ! -d ${HOME}/work/sw/r_rstudio ]; then
-    mkdir -p ${HOME}/work/sw/r_rstudio
+if [ ! -d ${HOME}/work/sw7/r_rstudio ]; then
+    mkdir -p ${HOME}/work/sw7/r_rstudio
 fi
-`which singularity` pull library://nucci/default/rstudiobase:test
-mv rstudiobase_test.sif ${HOME}/work/sw/r_rstudio
+
+$(command -v singularity) pull library://nucci/default/rstudiobase:test
+mv rstudiobase_test.sif ${HOME}/work/sw7/r_rstudio
 
 # Set up module file
 echo "Setting up module"
-if [ ! -d ${HOME}/work/sw/modules/r_rstudio ]; then
-    mkdir -p ${HOME}/work/sw/modules/r_rstudio
+if [ ! -d ${HOME}/work/sw7/modules/r_rstudio ]; then
+    mkdir -p ${HOME}/work/sw7/modules/r_rstudio
 fi
-cp ${PWD}/src/test.lua ${HOME}/work/sw/modules/r_rstudio/test.lua
+cp ${PWD}/src/test.lua ${HOME}/work/sw7/modules/r_rstudio/test.lua
 
 echo "To load the r_rstudio module use the following commands:"
-echo -e "\nmodule use ${HOME}/work/sw/modules"
+echo -e "\nmodule use ${HOME}/work/sw7/modules"
 echo -e "module load r_rstudio/test\n"
 echo "All done!"
