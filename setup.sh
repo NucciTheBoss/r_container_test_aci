@@ -10,7 +10,7 @@ if [ ! -d ${HOME}/work/sw7/r_rstudio ]; then
     mkdir -p ${HOME}/work/sw7/r_rstudio
 fi
 
-$(command -v singularity) pull library://nucci/default/rstudiobase:test
+wget https://github.com/NucciTheBoss/r_container_test_roar/releases/download/v1.0/rstudiobase_test.sif
 mv rstudiobase_test.sif ${HOME}/work/sw7/r_rstudio
 
 # Set up module file
