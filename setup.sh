@@ -18,7 +18,9 @@ echo "Setting up module"
 if [ ! -d ${HOME}/work/sw7/modules/r_rstudio ]; then
     mkdir -p ${HOME}/work/sw7/modules/r_rstudio
 fi
+
 cp ${PWD}/src/test.lua ${HOME}/work/sw7/modules/r_rstudio/test.lua
+chmod -R ug+rx ${HOME}/work/sw7/modules/r_rstudio
 
 echo "To load the r_rstudio module use the following commands:"
 echo -e "\nmodule use ${HOME}/work/sw7/modules"
