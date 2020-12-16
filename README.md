@@ -22,8 +22,8 @@ All that just to print out the R version! In the eyes of HCD this is unacceptabl
 To correctly setup this repository for testing I created a simple shell script that will take care of everything for you. Simply use the following commands to download and set up the test environment:
 
 ```bash
-$ git clone https://github.com/NucciTheBoss/r_container_test_aci.git
-$ cd r_container_test_aci
+$ git clone https://github.com/NucciTheBoss/r_container_test_roar.git
+$ cd r_container_test_roar
 $ bash setup.sh
 ```
 
@@ -55,7 +55,7 @@ The RStudio GUI should open with no problem, and you should be able to start wri
 Now that we have written our code we want to run in RStudio, it is time to submit it as a batch job to the cluster. The pbs file is already stored in the git repo, so all you have to is change into the directory and use `qsub` to submit the job:
 
 ```bash
-$ cd r_container_test_aci
+$ cd r_container_test_roar
 $ qsub plotter.pbs
 ```
 
