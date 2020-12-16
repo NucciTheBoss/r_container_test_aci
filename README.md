@@ -1,6 +1,6 @@
 # Table of Contents
 * [Introduction](#introduction)
-* [Installation](#installation)
+* [Set up the Test](#set-up-the-test)
 * [The Test](#the-test)
 * [License](#license)
 * [Troubleshooting](#troubleshooting)
@@ -18,7 +18,7 @@ $ singularity -s exec my_container.sif R --version
 
 All that just to print out the R version! In the eyes of HCD this is unacceptable. Users are used to loading modules, not having to learn a whole new method in order to interact with software on the cluster. Therefore, I create a module that users can load! Now we are back in the land of the familiar, and users can again focus on their research rather than learning the ins and outs of the Linux command line.
 
-# Installation
+# Set up the Test
 To correctly setup this repository for testing I created a simple shell script that will take care of everything for you. Simply use the following commands to download and set up the test environment:
 
 ```bash
